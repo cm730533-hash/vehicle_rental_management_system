@@ -8,7 +8,7 @@ class Vehicle {
     protected String brand;         
     protected double rentPerDay;    // This will now hold a unique rate per brand 
 
-    // Parameterized constructor [cite: 15, 41]
+    // Parameterized constructor 
     public Vehicle(String vehicleNumber, String brand, double rentPerDay) {
         this.vehicleNumber = vehicleNumber;
         this.brand = brand;
@@ -43,7 +43,7 @@ class Car extends Vehicle {
     // Step 3: Overriding calculateRent() for Car 
     @Override
     public double calculateRent(int days) {
-        // Cars have a higher rent rate structure [cite: 37, 38]: Base rate + a flat 200 daily premium fee 
+        // Cars have a higher rent rate structure : Base rate + a flat 200 daily premium fee 
         double baseRent = super.calculateRent(days);
         double premiumFee = 200 * days; 
         return baseRent + premiumFee;
